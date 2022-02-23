@@ -67,7 +67,7 @@ wfx-$(CONFIG_WFX_SECURE_LINK) += \
 	mbedtls/library/sha512.o
 
 ccflags-$(CONFIG_WFX_SECURE_LINK) += \
-	-I$(src)/mbedtls/include -DCONFIG_WFX_SECURE_LINK=y
+	-I$(src)/mbedtls/include -DCONFIG_WFX_SECURE_LINK=y -Wframe-larger-than=3096
 
 obj-m += wfx.o
 
